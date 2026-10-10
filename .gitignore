@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Odoo
+*.log
+*.pid
+*.pot
+filestore/
+sessions/
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
