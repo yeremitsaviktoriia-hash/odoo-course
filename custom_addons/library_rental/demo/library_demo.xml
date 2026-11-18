@@ -1,0 +1,117 @@
+<odoo>
+    <record id="book_demo_dune" model="library.book">
+        <field name="name">Dune</field>
+        <field name="author">Frank Herbert</field>
+        <field name="isbn">9780441172719</field>
+        <field name="publish_year">1965</field>
+    </record>
+    <record id="book_demo_pride_and_prejudice" model="library.book">
+        <field name="name">Pride and Prejudice</field>
+        <field name="author">Jane Austen</field>
+        <field name="isbn">9780141439518</field>
+        <field name="publish_year">1813</field>
+    </record>
+    <record id="book_demo_metamorphosis" model="library.book">
+        <field name="name">The Metamorphosis</field>
+        <field name="author">Franz Kafka</field>
+        <field name="isbn">9780553213690</field>
+        <field name="publish_year">1915</field>
+    </record>
+    <record id="book_demo_1984" model="library.book">
+        <field name="name">Nineteen Eighty-Four</field>
+        <field name="author">George Orwell</field>
+        <field name="isbn">9780451524935</field>
+        <field name="publish_year">1949</field>
+    </record>
+
+    <record id="copy_demo_dune_1" model="library.copy">
+        <field name="book_id" ref="book_demo_dune"/>
+        <field name="inventory_number">DUNE-001</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_demo_dune_2" model="library.copy">
+        <field name="book_id" ref="book_demo_dune"/>
+        <field name="inventory_number">DUNE-002</field>
+        <field name="condition">new</field>
+    </record>
+    <record id="copy_demo_pride_1" model="library.copy">
+        <field name="book_id" ref="book_demo_pride_and_prejudice"/>
+        <field name="inventory_number">PRIDE-001</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_demo_pride_2" model="library.copy">
+        <field name="book_id" ref="book_demo_pride_and_prejudice"/>
+        <field name="inventory_number">PRIDE-002</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_demo_metamorphosis_1" model="library.copy">
+        <field name="book_id" ref="book_demo_metamorphosis"/>
+        <field name="inventory_number">META-001</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_demo_metamorphosis_2" model="library.copy">
+        <field name="book_id" ref="book_demo_metamorphosis"/>
+        <field name="inventory_number">META-002</field>
+        <field name="condition">damaged</field>
+    </record>
+    <record id="copy_demo_1984_1" model="library.copy">
+        <field name="book_id" ref="book_demo_1984"/>
+        <field name="inventory_number">1984-001</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_demo_1984_2" model="library.copy">
+        <field name="book_id" ref="book_demo_1984"/>
+        <field name="inventory_number">1984-002</field>
+        <field name="condition">new</field>
+    </record>
+
+    <record id="member_demo_anna" model="library.member">
+        <field name="name">Anna Shevchenko</field>
+        <field name="membership_number">MEM-1001</field>
+        <field name="email">anna@example.com</field>
+        <field name="phone">+380501001001</field>
+    </record>
+    <record id="member_demo_oleh" model="library.member">
+        <field name="name">Oleh Kovalenko</field>
+        <field name="membership_number">MEM-1002</field>
+        <field name="email">oleh@example.com</field>
+        <field name="phone">+380501001002</field>
+    </record>
+    <record id="member_demo_maria" model="library.member">
+        <field name="name">Maria Bondar</field>
+        <field name="membership_number">MEM-1003</field>
+        <field name="email">maria@example.com</field>
+        <field name="phone">+380501001003</field>
+    </record>
+
+    <record id="loan_demo_active_dune" model="library.loan">
+        <field name="copy_id" ref="copy_demo_dune_1"/>
+        <field name="member_id" ref="member_demo_anna"/>
+        <field name="loan_date">2026-10-20</field>
+        <field name="due_date">2026-11-03</field>
+        <field name="state">active</field>
+    </record>
+    <record id="loan_demo_active_1984" model="library.loan">
+        <field name="copy_id" ref="copy_demo_1984_1"/>
+        <field name="member_id" ref="member_demo_oleh"/>
+        <field name="loan_date">2026-10-22</field>
+        <field name="due_date">2026-11-05</field>
+        <field name="state">active</field>
+    </record>
+    <record id="loan_demo_returned_pride" model="library.loan">
+        <field name="copy_id" ref="copy_demo_pride_1"/>
+        <field name="member_id" ref="member_demo_maria"/>
+        <field name="loan_date">2026-09-01</field>
+        <field name="due_date">2026-09-15</field>
+        <field name="return_date">2026-09-12</field>
+        <field name="state">returned</field>
+    </record>
+    <record id="loan_demo_returned_metamorphosis" model="library.loan">
+        <field name="copy_id" ref="copy_demo_metamorphosis_1"/>
+        <field name="member_id" ref="member_demo_anna"/>
+        <field name="loan_date">2026-08-10</field>
+        <field name="due_date">2026-08-24</field>
+        <field name="return_date">2026-08-23</field>
+        <field name="state">returned</field>
+    </record>
+</odoo>

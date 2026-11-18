@@ -1,0 +1,8 @@
+Крок 5. Odoo 19 shell, library_db, 18.11.2026
+Витяг фактичного виводу виконання. Команди наведено у README.md.
+
+AUTHOR: [{'id': 6, 'name': 'Dune', 'author': 'Frank Herbert'}]
+BOOK: 6 FREE: 1 ['ORM-DUNE-001']
+TODAY: 2026-11-18 OVERDUE: []
+COPY: 9 ORM-DUNE-001 MEMBER: 4 ORM Practice Reader
+LOAN: [{'id': 5, 'state': 'returned', 'loan_date': datetime.date(2026, 11, 18), 'due_date': datetime.date(2026, 11, 18), 'return_date': datetime.date(2026, 11, 18)}]
