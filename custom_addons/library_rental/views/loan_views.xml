@@ -3,7 +3,8 @@
         <field name="name">library.loan.list</field>
         <field name="model">library.loan</field>
         <field name="arch" type="xml">
-            <list>
+            <list decoration-danger="is_overdue">
+                <field name="is_overdue" column_invisible="True"/>
                 <field name="copy_id"/>
                 <field name="book_name"/>
                 <field name="book_author"/>
@@ -12,6 +13,7 @@
                 <field name="loan_date"/>
                 <field name="due_date"/>
                 <field name="return_date"/>
+                <field name="fine_amount"/>
                 <field name="state"/>
             </list>
         </field>
@@ -35,6 +37,7 @@
                             <field name="loan_date"/>
                             <field name="due_date"/>
                             <field name="return_date"/>
+                            <field name="fine_amount"/>
                             <field name="state"/>
                         </group>
                     </group>
